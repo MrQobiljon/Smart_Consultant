@@ -1,0 +1,557 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+/* ===================================== Import Less ================================== */
+@font-face {
+  font-family: 'mouse-300';
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'mouse-500';
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); }
+/* ===================================== Basic CSS ================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #444; }
+
+a:hover {
+  color: #444; }
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0; }
+
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.cp {
+  cursor: pointer; }
+
+html, body {
+  height: 100%; }
+
+p {
+  margin-bottom: 0px;
+  width: 100%; }
+
+.no-padding {
+  padding: 0px; }
+
+.no-margin {
+  margin: 0px; }
+
+.hid {
+  display: none; }
+
+.top-mar {
+  margin-top: 15px; }
+
+.h-100 {
+  height: 100%; }
+
+::placeholder {
+  color: #747f8a !important;
+  font-size: 13px;
+  opacity: .5 !important; }
+
+.container-fluid {
+  padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+strong {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+body {
+  background-color: #f7f7ff !important;
+  font-family: "mouse-300", Arial, Helvetica, sans-serif;
+  color: #1f1f1; }
+
+.session-title {
+  padding: 30px;
+  margin: 0px; }
+  .session-title h2 {
+    width: 100%;
+    text-align: center; }
+  .session-title p {
+    max-width: 850px;
+    text-align: center;
+    float: none;
+    margin: auto;
+    font-size: .9rem; }
+  .session-title span {
+    float: right;
+    font-style: italic; }
+
+.inner-title {
+  padding: 20px;
+  padding-left: 0px;
+  margin-bottom: 30px; }
+  .inner-title h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600; }
+  .inner-title p {
+    width: 100%;
+    text-align: center; }
+
+.page-nav {
+  padding: 40px;
+  text-align: center;
+  padding-top: 160px; }
+  .page-nav ul {
+    float: none;
+    margin: auto; }
+  .page-nav h2 {
+    font-size: 36px;
+    width: 100%;
+    color: #444; }
+    @media screen and (max-width: 600px) {
+      .page-nav h2 {
+        font-size: 26px; } }
+  .page-nav ul li {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px; }
+    .page-nav ul li i {
+      width: 30px;
+      text-align: center;
+      color: #444; }
+    .page-nav ul li a {
+      color: #444; }
+
+.btn-success {
+  background-color: #00ab9f;
+  border-color: #00ab9f; }
+  .btn-success:hover {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important; }
+  .btn-success:active {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important; }
+  .btn-success:focus {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important;
+    box-shadow: none !important; }
+
+.btn-info {
+  background-color: #0363b0;
+  border-color: #0363b0; }
+  .btn-info:hover {
+    background-color: #0363b0 !important;
+    border-color: #0363b0 !important; }
+  .btn-info:active {
+    background-color: #0363b0 !important;
+    border-color: #0363b0 !important; }
+  .btn-info:focus {
+    background-color: #0363b0 !important;
+    border-color: #0363b0 !important;
+    box-shadow: none !important; }
+
+.btn {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px; }
+
+.form-control:focus {
+  box-shadow: none !important;
+  border: 2px solid  #00a8df; }
+
+.btn-light {
+  background-color: #FFF;
+  color: #3F3F3F; }
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 100%; } }
+.collapse.show {
+  display: block !important; }
+
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #0d7a40 !important; }
+
+.form-control {
+  background-color: #F8F8F8;
+  margin-bottom: 20px; }
+  .form-control:focus {
+    background-color: #FFF;
+    border-color: #CCC; }
+
+/* ===================================== Header CSS ================================== */
+header {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  position: absolute;
+  width: 100%;
+  z-index: 99; }
+  header .header-top {
+    background-color: #FFF; }
+    header .header-top .left-top ul li {
+      float: left;
+      padding: 10px; }
+    header .header-top .right-top ul li {
+      float: right;
+      padding: 10px; }
+  header nav {
+    background-color: rgba(0, 0, 0, 0.4); }
+    header nav .logo {
+      padding: 12px; }
+      header nav .logo img {
+        min-width: 200px;
+        max-width: 300px; }
+    header nav ul li {
+      float: left;
+      padding: 30px 30px;
+      font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+      @media screen and (max-width: 1199px) {
+        header nav ul li {
+          padding: 30px 10px; } }
+      @media screen and (max-width: 767px) {
+        header nav ul li {
+          float: none;
+          padding: 8px; } }
+      header nav ul li a {
+        color: #FFF !important; }
+        header nav ul li a:hover {
+          color: #FFF !important; }
+
+.small-menu {
+  float: right;
+  color: #fff;
+  font-size: 32px;
+  margin-top: 17px;
+  margin-right: 12px; }
+  @media screen and (max-width: 767px) {
+    .small-menu {
+      margin-top: 11px; } }
+
+/* ===================================== Slider CSS ================================== */
+.slider-detail {
+  padding-top: 45px; }
+  .slider-detail .carousel-caption {
+    text-align: left;
+    bottom: 90px; }
+    @media screen and (max-width: 1180px) {
+      .slider-detail .carousel-caption {
+        bottom: 30px; } }
+    @media screen and (max-width: 1057px) {
+      .slider-detail .carousel-caption {
+        bottom: 10px; } }
+    .slider-detail .carousel-caption h5 {
+      font-size: 44px;
+      margin-left: -40px;
+      text-align: center; }
+      @media screen and (max-width: 1057px) {
+        .slider-detail .carousel-caption h5 {
+          font-size: 32px; } }
+      @media screen and (max-width: 927px) {
+        .slider-detail .carousel-caption h5 {
+          font-size: 22px; } }
+    .slider-detail .carousel-caption p {
+      margin-left: -40px;
+      font-weight: 600;
+      margin-top: 40px;
+      font-size: 19px;
+      text-align: center; }
+      @media screen and (max-width: 1057px) {
+        .slider-detail .carousel-caption p {
+          font-size: 16px; } }
+      @media screen and (max-width: 927px) {
+        .slider-detail .carousel-caption p {
+          font-size: 13px; } }
+  .slider-detail .vbh {
+    margin-left: -40px;
+    text-align: center; }
+    .slider-detail .vbh .btn {
+      padding: 10px;
+      margin-top: 40px;
+      width: 200px;
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: 18px; }
+  .slider-detail .vdg-cur {
+    color: #FFF;
+    padding-top: 70px; }
+
+/* ===================================== Slider CSS ================================== */
+.key-featur {
+  background-color: #FFF; }
+  .key-featur .key-md {
+    float: none;
+    margin: auto; }
+    .key-featur .key-md .kyy {
+      background-color: #00ab9f;
+      color: #FFF;
+      text-align: center;
+      padding: 35px 30px;
+      font-size: 1.4rem; }
+      .key-featur .key-md .kyy i {
+        font-size: 26px;
+        margin-right: 10px; }
+    .key-featur .key-md .kyd {
+      background-color: #05867d; }
+
+/* ===================================== Slider CSS ================================== */
+.wat-we-do {
+  padding: 80px 50px;
+  background-color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .wat-we-do {
+      padding: 50px 10px; } }
+  .wat-we-do .wemd {
+    text-align: center;
+    padding: 10px; }
+    .wat-we-do .wemd i {
+      color: #00ab9f;
+      font-size: 32px;
+      margin-bottom: 10px; }
+    .wat-we-do .wemd p {
+      margin-top: 10px;
+      font-size: .9rem; }
+  .wat-we-do .we-desic {
+    padding: 10px;
+    font-size: .9rem;
+    border-left: 5px solid #00ab9f;
+    padding-left: 15px;
+    margin-top: 10px; }
+
+/* ===================================== Key Features CSS ================================== */
+.key-features {
+  padding: 80px 50px; }
+  @media screen and (max-width: 940px) {
+    .key-features {
+      padding: 50px 10px; } }
+  .key-features .single-key {
+    background-color: #FFF;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 30px; }
+    .key-features .single-key i {
+      background-color: #00ab9f;
+      padding: 20px;
+      font-size: 42px;
+      color: #FFF;
+      margin-bottom: 30px;
+      border-radius: 50px; }
+    .key-features .single-key:hover {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+    .key-features .single-key p {
+      font-family: "mouse-300", Arial, Helvetica, sans-serif;
+      font-size: 15px; }
+
+/* ===================================== Who we are CSS ================================== */
+.who-we-bg {
+  background-image: url(../images/slider/slide-02.jpg); }
+  .who-we-bg .with-cc {
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF; }
+    .who-we-bg .with-cc p {
+      font-size: .9rem;
+      text-indent: 20px; }
+    .who-we-bg .with-cc ul {
+      margin-top: 20px; }
+      .who-we-bg .with-cc ul li {
+        padding: 5px;
+        font-size: .9rem; }
+        .who-we-bg .with-cc ul li i {
+          margin-right: 10px; }
+
+/*====================================== Blog Style ====================================*/
+.blog {
+  padding: 50px; }
+  @media screen and (max-width: 990px) {
+    .blog {
+      padding: 50px 10px; } }
+  @media screen and (max-width: 1199px) {
+    .blog .container {
+      max-width: 100%; } }
+  .blog .blog-singe {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    background-color: #FFF;
+    margin-bottom: 30px; }
+    .blog .blog-singe .blog-img-tab {
+      padding: 0px; }
+    .blog .blog-singe .blog-content-tab {
+      padding: 15px; }
+      .blog .blog-singe .blog-content-tab h2 {
+        font-size: 19px; }
+      .blog .blog-singe .blog-content-tab i {
+        margin-right: 10px;
+        font-size: 12px; }
+        .blog .blog-singe .blog-content-tab i small {
+          margin-left: 5px;
+          font-size: 100%; }
+      .blog .blog-singe .blog-content-tab .blog-desic {
+        margin-top: 8px;
+        font-size: 12px;
+        text-indent: 20px;
+        margin-bottom: 10px; }
+      .blog .blog-singe .blog-content-tab a {
+        color: #06b2b6;
+        font-size: 12px; }
+        .blog .blog-singe .blog-content-tab a i {
+          margin-left: 15px;
+          font-size: 13px; }
+
+.blog-new-page {
+  background-color: #FFF; }
+
+/* ===================================== Gallery Style  ================================== */
+.gallery-filter {
+  width: 100%;
+  text-align: center; }
+  .gallery-filter .btn {
+    background-color: #FFF; }
+
+.gallery {
+  padding: 30px;
+  background-color: #FFF; }
+
+.gallery-title {
+  font-size: 36px;
+  color: #00ab9f;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 70px; }
+
+.gallery-title:after {
+  content: "";
+  position: absolute;
+  width: 7.5%;
+  left: 46.5%;
+  height: 45px;
+  border-bottom: 1px solid #00ab9f; }
+
+.filter-button {
+  font-size: 18px;
+  border: 1px solid #00ab9f;
+  border-radius: 5px;
+  text-align: center;
+  color: #00ab9f;
+  margin-bottom: 30px; }
+
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #00ab9f;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #00ab9f; }
+
+.btn-default:active .filter-button:active {
+  background-color: #00ab9f;
+  color: white; }
+
+.port-image {
+  width: 100%; }
+
+.gallery_product {
+  margin-bottom: 30px; }
+
+/* ===================================== Footer Cover Style  ================================== */
+.footer-ablove {
+  padding: 30px;
+  background-color: #00ab9f;
+  color: #FFF;
+  font-size: 1.5rem; }
+  .footer-ablove .btn {
+    float: right;
+    background-color: #FFF;
+    font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+footer {
+  padding: 80px 50px;
+  background-color: #222;
+  color: #FFF; }
+  @media screen and (max-width: 940px) {
+    footer {
+      padding: 50px 10px; } }
+  footer h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px; }
+  footer .about p {
+    font-size: .9em;
+    margin-bottom: 20px; }
+  footer .about .foot-address {
+    display: flex; }
+    footer .about .foot-address .icon {
+      padding: 20px 10px; }
+    footer .about .foot-address .addet {
+      font-size: .9rem;
+      margin: auto 0px; }
+  footer .fotblog .blohjb {
+    margin-bottom: 10px; }
+    footer .fotblog .blohjb p {
+      font-size: .9rem; }
+    footer .fotblog .blohjb span {
+      font-size: .9rem; }
+  footer .glink ul li {
+    padding: 10px; }
+    footer .glink ul li i {
+      margin-right: 10px; }
+    footer .glink ul li a {
+      color: #FFF; }
+  footer .tags ul li {
+    float: left;
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #CCC; }
+
+.copy {
+  padding: 20px;
+  background-color: #2E2E2E;
+  color: #FFF; }
+  .copy a {
+    color: #FFF; }
+  .copy span {
+    float: right; }
+    .copy span i {
+      margin-right: 20px; }
+
+.scroll-to-fixed-fixed {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.contact-us-single {
+  background-color: #FFF; }
+
+.contact-us-single .cop-ck {
+  padding: 10px 30px; }
+
+.contact-us-single .cop-ck h2 {
+  font-size: 22px;
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */
